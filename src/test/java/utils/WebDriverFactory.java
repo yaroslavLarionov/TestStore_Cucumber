@@ -22,6 +22,7 @@ public class WebDriverFactory {
             case "chrome":
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions options = new ChromeOptions();
+                options.setHeadless(true);
                 options.addArguments("window-size=2560x1440");
                 driver = new ChromeDriver(options);
                 break;
